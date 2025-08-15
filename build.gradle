@@ -8,6 +8,9 @@ plugins {
     id 'org.jetbrains.changelog' version '2.2.1'
     id 'xyz.wagyourtail.unimined' version '1.4.1'
 }
+repositories {
+
+}
 
 apply from: 'gradle/scripts/helpers.gradle'
 
@@ -119,6 +122,7 @@ dependencies {
         testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     }
+//    implementation cg.deobf("curse.maven:modularmachinery-community-edition-817377:6480528")
 }
 
 apply from: 'gradle/scripts/dependencies.gradle'
