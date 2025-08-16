@@ -188,7 +188,7 @@ dependencies {
     testCompileOnly("me.eigenraven.java8unsupported:java-8-unsupported-shim:1.0.0")
 
     // Mixins
-//    implementation("zone.rong:mixinbooter:7.1")
+    implementation("zone.rong:mixinbooter:7.1")
 //    val mixin : String = modUtils.enableMixins("zone.rong:mixinbooter:9.3", "mixins.stellar_core.refmap.json").toString()
 //    api (mixin) {
 //        isTransitive = false
@@ -202,8 +202,8 @@ dependencies {
 
     // Mod Dependencies
     implementation("com.cleanroommc:configanytime:2.0")
-    compileOnly("CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.+")
-    compileOnly(rfg.deobf("curse.maven:modularmachinery-community-edition-817377:5375642"))
+    implementation("CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.+")
+    implementation(rfg.deobf("curse.maven:modularmachinery-community-edition-817377:5375642"))
     implementation(rfg.deobf("curse.maven:had-enough-items-557549:5210315"))
     compileOnly(rfg.deobf("curse.maven:jei-utilities-616190:4630499"))
     implementation(rfg.deobf("curse.maven:the-one-probe-245211:2667280"))
