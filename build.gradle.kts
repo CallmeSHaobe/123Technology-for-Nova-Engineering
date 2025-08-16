@@ -43,9 +43,9 @@ minecraft {
     val args = mutableListOf("-ea:${project.group}")
 
     // Mixin args
-    args.add("-Dmixin.hotSwap=true")
-    args.add("-Dmixin.checks.interfaces=true")
-    args.add("-Dmixin.debug.export=true")
+    args.add("-Dmixin.hotSwap=false")
+    args.add("-Dmixin.checks.interfaces=false")
+    args.add("-Dmixin.debug.export=false")
     extraRunJvmArguments.addAll(args)
 
     // If needed, add extra tweaker classes like for mixins.
@@ -189,16 +189,16 @@ dependencies {
 
     // Mixins
 //    implementation("zone.rong:mixinbooter:7.1")
-    val mixin : String = modUtils.enableMixins("zone.rong:mixinbooter:9.3", "mixins.stellar_core.refmap.json").toString()
-    api (mixin) {
-        isTransitive = false
-    }
+//    val mixin : String = modUtils.enableMixins("zone.rong:mixinbooter:9.3", "mixins.stellar_core.refmap.json").toString()
+//    api (mixin) {
+//        isTransitive = false
+//    }
     annotationProcessor("org.ow2.asm:asm-debug-all:5.2")
     annotationProcessor("com.google.guava:guava:30.0-jre")
     annotationProcessor("com.google.code.gson:gson:2.8.9")
-    annotationProcessor (mixin) {
-        isTransitive = false
-    }
+//    annotationProcessor (mixin) {
+//        isTransitive = false
+//    }
 
     // Mod Dependencies
     implementation("com.cleanroommc:configanytime:2.0")
